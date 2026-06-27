@@ -743,11 +743,19 @@ For models with `supports_vision: true`:
 ## Documentation
 
 See `docs/` directory for detailed documentation:
+- [AGENT_CREATION.md](docs/AGENT_CREATION.md) - Custom agent creation, SOUL.md, bootstrap flow
+- [EXTENSION_POINTS.md](docs/EXTENSION_POINTS.md) - All extension mechanisms (middleware, config-driven, providers)
 - [CONFIGURATION.md](docs/CONFIGURATION.md) - Configuration options
 - [ARCHITECTURE.md](docs/ARCHITECTURE.md) - Architecture details
 - [API.md](docs/API.md) - API reference
+- [middleware-execution-flow.md](docs/middleware-execution-flow.md) - Middleware execution order and hook matrix
 - [SETUP.md](docs/SETUP.md) - Setup guide
 - [FILE_UPLOAD.md](docs/FILE_UPLOAD.md) - File upload feature
 - [PATH_EXAMPLES.md](docs/PATH_EXAMPLES.md) - Path types and usage
 - [summarization.md](docs/summarization.md) - Context summarization
 - [plan_mode_usage.md](docs/plan_mode_usage.md) - Plan mode with TodoList
+- [GUARDRAILS.md](docs/GUARDRAILS.md) - Guardrail middleware and pluggable providers
+- [STREAMING.md](docs/STREAMING.md) - SSE streaming design
+- [MCP_SERVER.md](docs/MCP_SERVER.md) - MCP server setup and OAuth
+- [IM_CHANNEL_CONNECTIONS.md](docs/IM_CHANNEL_CONNECTIONS.md) - User-owned channel connections
+- [TUI.md](docs/TUI.md) - Terminal UI architecture
