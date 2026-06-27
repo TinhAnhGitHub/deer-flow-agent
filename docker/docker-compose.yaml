@@ -120,6 +120,9 @@ services:
     networks:
       - deer-flow
     restart: unless-stopped
+    depends_on:            
+      postgres:
+        condition: service_started
 
   # ── Sandbox Provisioner (optional, Kubernetes mode) ────────────────────────
   provisioner:
@@ -152,6 +155,26 @@ services:
       interval: 10s
       timeout: 5s
       retries: 6
+  
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: deer-flow-postgres
+    environment:
+      POSTGRES_USER: deerflow
+      POSTGRES_PASSWORD: deerflow
+      POSTGRES_DB: deerflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - deer-flow
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+
 networks:
   deer-flow:
     driver: bridge
